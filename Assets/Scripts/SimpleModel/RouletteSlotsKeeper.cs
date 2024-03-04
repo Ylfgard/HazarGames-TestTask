@@ -8,6 +8,11 @@ public class RouletteSlotsKeeper : MonoBehaviour
     [SerializeField] private RouletteSlotsGenerator _generator;
     [SerializeField] private TextMeshProUGUI[] _slotsText;
 
+    public void GenerateSlots()
+    {
+        _generator.GenerateSlots(Slots);
+    }
+
     private void Awake()
     {
         Slots = new RouletteSlot[_slotsText.Length];
@@ -18,10 +23,5 @@ public class RouletteSlotsKeeper : MonoBehaviour
     private void Start()
     {
         GenerateSlots();
-    }
-
-    public void GenerateSlots()
-    {
-        _generator.GenerateSlots(Slots);
     }
 }

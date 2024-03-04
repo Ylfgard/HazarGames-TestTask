@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class RewardGenerator : MonoBehaviour
 {
-    public Sprite CurReward => _rewards[_curIndex];
-
     [SerializeField] private Image _image;
     [SerializeField] private Sprite[] _rewards;
 
     private List<int> _indexes = new List<int>();
     private int _curIndex;
+
+    public Sprite CurReward => _rewards[_curIndex];
 
     private void Awake()
     {
