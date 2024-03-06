@@ -26,7 +26,6 @@ namespace GameStateController
                 await Task.Delay(1000);
             }
 
-            Ticked?.Invoke(_curTime);
             _stateNotifier.SwitchToActive();
         }
 
