@@ -2305,7 +2305,7 @@ MonoBehaviour:
   _slotsKeeper: {fileID: 1268062387}
   _view: {fileID: 1268062386}
   _spinCount: 3
-  _spinDuration: 2
+  _spinDuration: 5
 --- !u!114 &1268062386
 MonoBehaviour:
   m_ObjectHideFlags: 0

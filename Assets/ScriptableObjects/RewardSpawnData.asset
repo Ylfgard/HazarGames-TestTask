@@ -15,6 +15,6 @@ MonoBehaviour:
   <ShowDuration>k__BackingField: 1
   <HideMinDelay>k__BackingField: 1
   <HideMaxDelay>k__BackingField: 2.5
-  <HideDuration>k__BackingField: 1.5
+  <HideDuration>k__BackingField: 1
   <R1>k__BackingField: 50
   <R2>k__BackingField: 200

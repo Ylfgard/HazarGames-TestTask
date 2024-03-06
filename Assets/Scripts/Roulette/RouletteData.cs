@@ -13,7 +13,7 @@ namespace Roulette
         [SerializeField] private RouletteView _view;
 
         [SerializeField] private int _spinCount = 3;
-        [SerializeField] private float _spinDuration = 1.5f;
+        [SerializeField] private float _spinDuration = 5f;
 
         private IStateNotifier _stateNotifier;
 
@@ -28,6 +28,7 @@ namespace Roulette
         {
             int slotsCount = _slotsKeeper.Slots.Length;
             int newSlot = Random.Range(0, slotsCount);
+            Debug.Log(_slotsKeeper.Slots[newSlot].Value);
 
             int sectionAngle = 360 / slotsCount;
             int rotateAngle = sectionAngle * newSlot;
@@ -39,7 +40,6 @@ namespace Roulette
 
         private IEnumerator DelayBeforeReward(int value)
         {
-            Debug.Log(value);
             yield return new WaitForSeconds(_spinDuration);
             RolledValue?.Invoke(value);
         }
